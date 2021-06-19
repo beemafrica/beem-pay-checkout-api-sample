@@ -9,7 +9,7 @@ $Url ='https://checkout.beem.africa/v1/checkout';
  $amount ='<amount>'; 
  $mobile ='<mobile>'; 
  $sendSource ='<sendSource>'; 
- $body = array('amount'=>$amount,'reference_number'=>$reference_number,'mobile'=>$mobile,'reference_number'=>$reference_number);
+ $body = array('amount'=>$amount,'reference_number'=>$reference_number,'mobile'=>$mobile,'sendSource'=>$sendSource);
 
 // Setup cURL
 $ch = curl_init($Url);
