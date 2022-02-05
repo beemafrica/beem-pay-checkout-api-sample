@@ -5,12 +5,15 @@ const btoa = require("btoa");
 const url = "https://checkout.beem.africa/v1/checkout";
 const api_key = "<API_KEY>";
 const secret_key = "<SECRET_KEY>";
+const beem_secure_token = "<SECURE_TOKEN>";
 const content_type = "application/json";
 
 let payload = {
   headers: {
     "Content-Type": content_type,
     Authorization: "Basic " + btoa(api_key + ":" + secret_key),
+    "beem-secure-token": beem_secure_token,
+
   },
   params: {
     amount: "<amount>",

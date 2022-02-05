@@ -1,6 +1,7 @@
 <?php
 $username = '<api_key>';
 $password = '<secret_key>';
+$secure_token = '<secure_token>';
 
 $Url = 'https://checkout.beem.africa/v1/checkout';
 
@@ -27,6 +28,7 @@ curl_setopt_array($ch, array(
     CURLOPT_HTTPHEADER => array(
         'Authorization:Basic ' . base64_encode("$username:$password"),
         'Content-Type: application/json',
+        'beem-secure-token: $secure_token',
     ),
 ));
 
